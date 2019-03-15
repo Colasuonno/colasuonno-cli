@@ -1,5 +1,8 @@
 package it.colasuonno.cli.objects;
 
+import it.colasuonno.cli.logger.CLILogger;
+
+import java.util.Arrays;
 import java.util.List;
 
 public class CLIComponent {
@@ -12,7 +15,7 @@ public class CLIComponent {
         String[] args = new String[space.length-1];
         this.main = space[0];
         for (int i = 1; i < space.length; i++){
-            args[i] = space[i];
+            args[i-1] = space[i];
         }
         this.args = args;
     }

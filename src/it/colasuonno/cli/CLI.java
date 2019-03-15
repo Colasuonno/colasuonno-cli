@@ -16,10 +16,11 @@ public class CLI {
         new Time();
 
         Scanner scanner = new Scanner(System.in);
-        String found = scanner.next();
+        String found = scanner.nextLine();
         CLIComponent component = new CLIComponent(found);
         CLIObject object = CLIParser.parse(component.getMain(), component.getArgs());
-        object.output();
+        if (object != null) object.output(null, null);
+        main(args);
     }
 
 }

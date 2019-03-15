@@ -18,6 +18,10 @@ public class CLILogger {
         System.out.println(ANSI_RED + "[CLI-DEBUG] " + message);
     }
 
+    public static void i(Object message){
+        System.out.println(ANSI_PURPLE + "[CLI-INFO] " + message);
+    }
+
     public static void officialDebug(Object message){
         if (CLI.DEBUG) System.out.println(ANSI_CYAN + "[CLI-OFFICIAL-DEBUG] " + message);
     }
