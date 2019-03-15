@@ -1,5 +1,7 @@
 package it.colasuonno.cli;
 
+import it.colasuonno.cli.lib.Convert;
+import it.colasuonno.cli.lib.JSONHttp;
 import it.colasuonno.cli.lib.Time;
 import it.colasuonno.cli.objects.CLIComponent;
 import it.colasuonno.cli.objects.CLIObject;
@@ -9,11 +11,13 @@ import java.util.Scanner;
 
 public class CLI {
 
-    public static final boolean DEBUG = true;
+    public static final boolean DEBUG = false;
 
     public static void main(String[] args) {
 
         new Time();
+        new Convert();
+        new JSONHttp();
 
         Scanner scanner = new Scanner(System.in);
         String found = scanner.nextLine();

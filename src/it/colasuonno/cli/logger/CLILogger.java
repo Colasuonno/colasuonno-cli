@@ -15,15 +15,15 @@ public class CLILogger {
     private static final String ANSI_WHITE = "\u001B[37m";
 
     public static void d(Object message){
-        System.out.println(ANSI_RED + "[CLI-DEBUG] " + message);
+        System.out.println(ANSI_RED + "[CLI-DEBUG] " + message + ANSI_RESET);
     }
 
     public static void i(Object message){
-        System.out.println(ANSI_PURPLE + "[CLI-INFO] " + message);
+        System.out.println(ANSI_PURPLE + "[CLI-INFO] " + message + ANSI_RESET);
     }
 
     public static void officialDebug(Object message){
-        if (CLI.DEBUG) System.out.println(ANSI_CYAN + "[CLI-OFFICIAL-DEBUG] " + message);
+        if (CLI.DEBUG) System.out.println(ANSI_CYAN + "[CLI-OFFICIAL-DEBUG] " + message + ANSI_RESET);
     }
 
 }

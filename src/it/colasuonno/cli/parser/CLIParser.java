@@ -26,17 +26,17 @@ public class CLIParser {
 
                 if (args.length - 1 > 0) {
                     CLIFollowedExpectedSubCommand followed = (CLIFollowedExpectedSubCommand) expectedSubComponent;
-                    String previous = args[args.length - 2];
+                    String previous = args[args.length - followed.getAge()];
 
                     if (followed.getPreviousValue().equalsIgnoreCase(previous)) {
-                        followed.output(lastString);
+                        followed.output(followed.isTotal() ? args : new String[]{args[args.length-1]});
                     } else return null;
 
                 } else return null;
 
 
             } else if (expectedSubComponent.getType().equals(CLISubType.VALUE) || expectedSubComponent.getValue().equalsIgnoreCase(args[args.length - 1])) {
-                expectedSubComponent.output(lastString);
+                expectedSubComponent.output(expectedSubComponent.isTotal() ? args :new String[]{lastString});
             } else return null;
         }
         return null;

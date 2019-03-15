@@ -4,11 +4,17 @@ public class CLIFollowedExpectedSubCommand extends CLIExpectedSubComponent {
 
     private String previousValue;
     private CLISubType previousType;
+    private int age;
 
-    public CLIFollowedExpectedSubCommand(String value, CLISubType type, CLIOutput output, String previousValue,CLISubType previousType) {
+    public CLIFollowedExpectedSubCommand(String value, CLISubType type, CLIOutput output, String previousValue,CLISubType previousType, int age) {
         super(value, type, output);
         this.previousValue = previousValue;
         this.previousType = previousType;
+        this.age = age;
+    }
+
+    public int getAge() {
+        return age;
     }
 
     public String getPreviousValue() {
@@ -24,6 +30,7 @@ public class CLIFollowedExpectedSubCommand extends CLIExpectedSubComponent {
         return "CLIFollowedExpectedSubCommand{" +
                 "previousValue='" + previousValue + '\'' +
                 ", previousType=" + previousType +
+                ", age=" + age +
                 '}';
     }
 }

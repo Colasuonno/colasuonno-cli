@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: it.colasuonno.cli.CLI
+Main-Class: it.colasuonno.cli.CLI
+
