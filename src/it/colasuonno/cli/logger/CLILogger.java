@@ -23,7 +23,15 @@ public class CLILogger {
     }
 
     public static void officialDebug(Object message){
-        if (CLI.DEBUG) System.out.println(ANSI_CYAN + "[CLI-OFFICIAL-DEBUG] " + message + ANSI_RESET);
+        officialDebug(message, false);
+    }
+
+    public static void clear(){
+        System.out.print("\033[H\033[2J");
+    }
+
+    public static void officialDebug(Object message, boolean force){
+        if (CLI.DEBUG || force) System.out.println(ANSI_CYAN + "[CLI-OFFICIAL-DEBUG] " + message + ANSI_RESET);
     }
 
 }

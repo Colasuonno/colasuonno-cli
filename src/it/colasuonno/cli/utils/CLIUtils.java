@@ -16,4 +16,25 @@ public class CLIUtils {
         return formatter.format(date);
     }
 
+    /**
+     * Method to format bytes in human readable format
+     *
+     * @param bytes
+     *            - the value in bytes
+     * @param digits
+     *            - number of decimals to be displayed
+     * @return human readable format string
+     */
+    public static String format(double bytes, int digits) {
+        String[] dictionary = { "bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB" };
+        int index;
+        for (index = 0; index < dictionary.length; index++) {
+            if (bytes < 1024) {
+                break;
+            }
+            bytes = bytes / 1024;
+        }
+        return String.format("%." + digits + "f", bytes) + " " + dictionary[index];
+    }
+
 }

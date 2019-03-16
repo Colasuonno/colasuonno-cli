@@ -1,8 +1,8 @@
 package it.colasuonno.cli;
 
-import it.colasuonno.cli.lib.Convert;
-import it.colasuonno.cli.lib.JSONHttp;
-import it.colasuonno.cli.lib.Time;
+import it.colasuonno.cli.debug.Exit;
+import it.colasuonno.cli.lib.*;
+import it.colasuonno.cli.logger.CLILogger;
 import it.colasuonno.cli.objects.CLIComponent;
 import it.colasuonno.cli.objects.CLIObject;
 import it.colasuonno.cli.parser.CLIParser;
@@ -18,6 +18,10 @@ public class CLI {
         new Time();
         new Convert();
         new JSONHttp();
+        new FreeSpace();
+        new Exit();
+        new Scan();
+        new Info();
 
         Scanner scanner = new Scanner(System.in);
         String found = scanner.nextLine();
