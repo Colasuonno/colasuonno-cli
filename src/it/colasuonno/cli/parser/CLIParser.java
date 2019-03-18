@@ -29,14 +29,14 @@ public class CLIParser {
                     String previous = args[args.length - followed.getAge()];
 
                     if (followed.getPreviousValue().equalsIgnoreCase(previous)) {
-                        followed.output(followed.isTotal() ? args : new String[]{args[args.length-1]});
+                        followed.output(followed.isTotal() ? args : new String[]{args[args.length-1]},args);
                     } else return null;
 
                 } else return null;
 
 
             } else if (expectedSubComponent.getType().equals(CLISubType.VALUE) || expectedSubComponent.getValue().equalsIgnoreCase(args[args.length - 1])) {
-                expectedSubComponent.output(expectedSubComponent.isTotal() ? args :new String[]{lastString});
+                expectedSubComponent.output(expectedSubComponent.isTotal() ? args :new String[]{lastString},args);
             } else return null;
         }
         return null;

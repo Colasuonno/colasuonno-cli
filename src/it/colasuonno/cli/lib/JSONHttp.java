@@ -22,7 +22,7 @@ public class JSONHttp extends CLIObject {
         super(CLIManager.buildInput("jsonpage"),
                 new CLIExpectedSubComponent("<value>", CLISubType.VALUE, new CLIOutput() {
                     @Override
-                    public void output(String[] value) {
+                    public void output(String[] value, String[] totalArgs) {
                         String url = value[0];
                         try {
                             String genreJson = IOUtils.toString(new URL(url));

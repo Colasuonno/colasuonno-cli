@@ -22,6 +22,7 @@ public class CLI {
         new Exit();
         new Scan();
         new Info();
+        new WebPage();
 
         Scanner scanner = new Scanner(System.in);
         String found = scanner.nextLine();

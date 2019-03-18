@@ -30,9 +30,8 @@ public class CLIManager {
 
 
     public static CLIOutput getDefaultOutput(){
-        return (value)-> {
+        return (value,args)-> {
             {
-
             }
         };
     }

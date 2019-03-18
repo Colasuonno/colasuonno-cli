@@ -22,6 +22,14 @@ public class CLILogger {
         System.out.println(ANSI_PURPLE + "[CLI-INFO] " + message + ANSI_RESET);
     }
 
+    public static void green(Object message){
+        System.out.println(ANSI_GREEN + message + ANSI_RESET);
+    }
+
+    public static void red(Object message){
+        System.out.println(ANSI_RED + message + ANSI_RESET);
+    }
+
     public static void officialDebug(Object message){
         officialDebug(message, false);
     }

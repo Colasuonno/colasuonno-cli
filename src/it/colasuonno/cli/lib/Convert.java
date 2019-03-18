@@ -27,7 +27,7 @@ public class Convert extends CLIObject {
                 new CLIExpectedSubComponent("<value>", CLISubType.VALUE),
                 new CLIFollowedExpectedSubCommand("<value>", CLISubType.VALUE, new CLIOutput() {
                     @Override
-                    public void output(String[] value) {
+                    public void output(String[] value, String[] totalArgs) {
 
                         String from = value[0];
                         String to = value[2];

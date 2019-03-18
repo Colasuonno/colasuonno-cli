@@ -21,8 +21,8 @@ public class CLIExpectedSubComponent extends CLISubComponent {
     }
 
 
-    public void output(String[] args){
-        output.output(args);
+    public void output(String[] args, String[] totalArgs){
+        output.output(args, totalArgs);
     }
 
     public boolean isTotal() {

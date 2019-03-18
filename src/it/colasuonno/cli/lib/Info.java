@@ -31,7 +31,7 @@ public class Info extends CLIObject {
         super(CLIManager.buildInput("info", "<value>"),
                 new CLIExpectedSubComponent("<value>", CLISubType.VALUE, new CLIOutput() {
                     @Override
-                    public void output(String[] value) {
+                    public void output(String[] value, String[] totalArgs) {
                         switch (value[0]) {
                             case "pc":
 

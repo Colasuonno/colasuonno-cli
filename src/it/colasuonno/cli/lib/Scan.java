@@ -24,7 +24,7 @@ public class Scan extends CLIObject {
         super(CLIManager.buildInput("scan", "<value>"),
                 new CLIExpectedSubComponent("<value>", CLISubType.VALUE, new CLIOutput() {
                     @Override
-                    public void output(String[] value) {
+                    public void output(String[] value, String[] totalArgs) {
                         switch (value[0]) {
                             case "wifi":
                                 try {

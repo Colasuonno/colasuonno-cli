@@ -16,7 +16,7 @@ public class Time extends CLIObject {
         super(CLIManager.buildInput("time", "<value>"),
                 new CLIExpectedSubComponent("use", CLISubType.NOTHING, CLIManager.getDefaultOutput()),
                 new CLIFollowedExpectedSubCommand("<value>", CLISubType.VALUE,
-                        (value) -> CLILogger.i(CLIUtils.getDateString(value[0])),
+                        (value, totalArgs) -> CLILogger.i(CLIUtils.getDateString(value[0])),
                         "use", CLISubType.NOTHING, 2));
     }
 
