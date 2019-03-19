@@ -6,6 +6,8 @@ import it.colasuonno.cli.logger.CLILogger;
 import it.colasuonno.cli.objects.CLIComponent;
 import it.colasuonno.cli.objects.CLIObject;
 import it.colasuonno.cli.parser.CLIParser;
+import sun.misc.Signal;
+import sun.misc.SignalHandler;
 
 import java.util.Scanner;
 
@@ -23,6 +25,15 @@ public class CLI {
         new Scan();
         new Info();
         new WebPage();
+        new Mkdir();
+        new List();
+
+        Signal.handle(new Signal("INT"), new SignalHandler() {
+            // Signal handler method
+            public void handle(Signal signal) {
+                System.out.println("Got signal" + signal);
+            }
+        });
 
         Scanner scanner = new Scanner(System.in);
         String found = scanner.nextLine();
