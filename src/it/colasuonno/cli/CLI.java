@@ -27,13 +27,7 @@ public class CLI {
         new WebPage();
         new Mkdir();
         new List();
-
-        Signal.handle(new Signal("INT"), new SignalHandler() {
-            // Signal handler method
-            public void handle(Signal signal) {
-                System.out.println("Got signal" + signal);
-            }
-        });
+        new Read();
 
         Scanner scanner = new Scanner(System.in);
         String found = scanner.nextLine();
